@@ -5,6 +5,9 @@ import random
 def get_numbers_ticket(min, max, quantity):
         set_of_numbers=set()
         while len(set_of_numbers) < quantity:
+            if quantity > (max-min):
+                print(f'Difference between min and max: {max-min}. This is to small range for desired quantity.')
+                break
             set_of_numbers.add(random.randint(min,max))
         else:
             sorted_list=sorted(set_of_numbers)
